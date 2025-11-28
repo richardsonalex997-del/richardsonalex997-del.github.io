@@ -293,16 +293,19 @@
 
             h1 {
                 font-size: 1.8rem; /* Уменьшаем заголовок */
-                margin-top: 50px; /* Место для кнопки "Назад" */
+                margin-top: 60px; /* Увеличили отступ сверху, чтобы заголовок не наезжал на фиксированную кнопку */
                 margin-bottom: 20px;
             }
 
             .back-btn {
-                top: 10px;
-                left: 10px;
+                position: fixed; /* Фиксируем кнопку относительно экрана */
+                top: 15px;
+                left: 15px;
                 padding: 8px 16px; /* Компактнее */
                 font-size: 0.85rem;
                 background-color: rgba(255, 255, 255, 0.95);
+                z-index: 4000; /* Очень высокий z-index, чтобы быть поверх всего */
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Тень посильнее для контраста */
             }
 
             .main-container {
